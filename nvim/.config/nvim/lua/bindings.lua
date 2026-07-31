@@ -2,7 +2,7 @@ local set = vim.keymap.set
 
 set("n", "<leader>we", ":aboveleft vsplit<CR>", { desc = "Vertical split", silent = true })
 set("n", "<leader>wq", ":belowright split<CR>", { desc = "Horizontal split", silent = true })
-set("n", "<leader>l", ":noh<CR>", { desc = "Short for :nohlsearch", silent = true })
+set("n", "<leader>/", ":noh<CR>", { desc = "Short for :nohlsearch", silent = true })
 
 set('n', '<leader>k', vim.lsp.buf.definition, { desc = "Go to definition" })
 
