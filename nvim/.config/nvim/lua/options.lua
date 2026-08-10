@@ -6,6 +6,7 @@ o.wrapmargin = 0
 o.cursorlineopt = "both"
 o.showmode = false
 o.swapfile = false
+o.exrc = true
 
 o.number = true
 o.cursorline = true
