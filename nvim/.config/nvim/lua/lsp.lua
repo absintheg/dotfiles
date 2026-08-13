@@ -5,16 +5,6 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-vim.lsp.config("*", {
-	capabilities = {
-		workspace = {
-			didChangeWatchedFiles = {
-				dynamicRegistration = true,
-			},
-		},
-	},
-})
-
 vim.diagnostic.config({
 	underline = {
 		severity = vim.diagnostic.severity.ERROR,
@@ -33,5 +23,6 @@ vim.lsp.config("rust_analyzer", {
 
 vim.lsp.enable({
 	"rust_analyzer",
-	"clangd"
+	"clangd",
+	"nixd",
 })
