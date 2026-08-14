@@ -1,10 +1,3 @@
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "*",
-	callback = function()
-		vim.opt_local.formatoptions:remove({ "c", "r", "o" })
-	end,
-})
-
 vim.diagnostic.config({
 	underline = {
 		severity = vim.diagnostic.severity.ERROR,
