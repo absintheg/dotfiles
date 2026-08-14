@@ -1,4 +1,4 @@
-local M = {
+return {
 	'stevearc/oil.nvim',
 	---@module 'oil'
 	---@type oil.SetupOpts
@@ -13,4 +13,3 @@ local M = {
 		require("oil").setup({})
 	end
 }
-return { M }
