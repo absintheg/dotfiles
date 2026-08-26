@@ -21,3 +21,13 @@ set('n', "<leader>g", function()
 		async = true,
 	})
 end, { desc = "Format buffer" })
+
+set("n", "gre", function()
+	local word = vim.fn.expand("<cword>")
+	local replacement = vim.fn.input("Replace " .. word .. " with: ")
+	if replacement ~= "" then
+		vim.cmd("%s/\\<" .. vim.fn.escape(word, "/\\") .. "\\>/" ..
+		vim.fn.escape(replacement, "/\\") .. "/g")
+		vim.cmd("nohl")
+	end
+end, { desc = "Replace word everywhere" })
