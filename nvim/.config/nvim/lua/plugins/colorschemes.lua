@@ -7,7 +7,8 @@ return {
 		opts = {
 			contrast = "hard",
 			palette_overrides = {
-				dark0_hard = "#1e1e1e"
+				dark0_hard = "#1e1e1e",
+				light0_hard = "#f5f5f5",
 			},
 		},
 	},
