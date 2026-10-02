@@ -1,10 +1,12 @@
 font-family = "JetBrainsMonoNL Nerd Font"
 font-size = 10
 
-palette = 2=#00C000
-palette = 10=#00C000
-background = "0c0c0c"
-foreground = "cccccc"
+theme = Alabaster
+
+palette = 2=#00A000
+palette = 10=#00A000
+# background = "0c0c0c"
+# foreground = "cccccc"
 cursor-color = "f0f0f0"
 cursor-opacity = 0.7
 
