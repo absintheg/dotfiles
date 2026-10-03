@@ -43,4 +43,21 @@ if not success then
 	print("Couldn't find the target colorscheme")
 end
 
-o.background = DEFAULT_BACKGROUND
+local function update_background()
+	local handle = io.popen("kreadconfig6 --file kdeglobals --group General --key ColorScheme")
+	local scheme = handle:read("*a")
+	handle:close()
+
+	if #scheme > 0 then
+		o.background = scheme:find("Light") and "light" or "dark"
+		print("Set to: "..o.background)
+	else
+		o.background = DEFAULT_BACKGROUND
+	end
+end
+
+vim.api.nvim_create_user_command("UpdBg", function()
+	update_background()
+end, {})
+
+update_background()
