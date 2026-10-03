@@ -50,7 +50,6 @@ local function update_background()
 
 	if #scheme > 0 then
 		o.background = scheme:find("Light") and "light" or "dark"
-		print("Set to: "..o.background)
 	else
 		o.background = DEFAULT_BACKGROUND
 	end
